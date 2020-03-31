@@ -1,0 +1,66 @@
+:root{
+  --font-family: 'CircularStd', Helvetica, 'Helvetica Neue', sans-serif;
+
+  --color-blue: #482E9B;
+  --color-blue-light: #A3A6E2;
+  --color-red: #F62939;  
+  --color-white: #ffffff;
+  --color-grey: #A7A5B5;
+  --color-pink: #FFF8F6;
+  --color-violet: #FFE9EB;
+  /* Regular */
+  --font-size-default: 20px;
+  --font-size-title: 48px;
+  --font-size-menu: 16px;
+  /* smart <640px*/
+
+  --font-variant: 'Poppins', Arial, Helvetica, 'Helvetica Neue', sans-serif;
+
+  /* @media */
+  /* --> nano: 640px; */
+  /* --> medium: 768px*; */
+  /* --> regular: 1024px; */
+  /* --> large: 1800px; */
+
+  --font-size-title-st: 24px;
+  --font-size-subtitle-st: 20px;
+  --font-size-default-st: 12px;
+  --font-size-menu-st: 8px;
+
+  /* Nano 640px*/
+  --font-size-title-nn: 44px;
+  --font-size-subtitle-nn: 16px;
+  --font-size-default-nn: 16px;
+  --font-size-menu-nn: 10px;
+
+  /* Medium 768px*/
+  --font-size-title-sm: 28px;
+  --font-size-subtitle-sm: 24px;
+  --font-size-default-sm: 12px;
+  --font-size-menu-sm: 10px;
+  
+  /* Medium 1024px*/
+  --font-size-title-md: 38px;
+  --font-size-subtitle-md: 28px;
+  --font-size-default-md: 14px;
+  --font-size-menu-md: 12px;
+
+  /* Large 1800*/
+  --font-size-title-lg: 58px;
+  --font-size-subtitle-lg: 42px;
+  --font-size-default-lg: 20px;
+  --font-size-menu-lg: 16px;
+}
+
+@import url('icons.css');
+
+/* tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* tailwind */
+
+body,
+body * {
+  font-family: var(--font-family);
+}
