@@ -46,7 +46,7 @@ const JobsHooks = props => {
     </section>
     <style jsx>{`
       .jobs {
-        padding: 15vh 0;
+        padding: 15vh 0 0;
       }
 
       .jobs\.header {
