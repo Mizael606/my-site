@@ -4,6 +4,8 @@ import About from "../components/about"
 import Skills from "../components/skills"
 import Jobs from "../components/jobs"
 import Message from "../components/message"
+import Footer from "../components/footer"
+
 const Home = () => (
   <>
     <Head />
@@ -12,6 +14,7 @@ const Home = () => (
     <Skills />
     <Jobs />
     <Message />
+    <Footer />
   </>
 )
 
