@@ -15,31 +15,31 @@ const FooterHooks = (props) => {
         </button>
       </header>
       <section className="footer.body lg:w-10/12 md:w-11/12  sm:w-11/12 mr-auto ml-auto flex flex-wrap justify-center item-center">
-        <div className="lg:w-3/12 md:w-3/12 sm:w-full w-full" >
+        <div className="xl:w-4/12 lg:w-3/12 md:w-3/12 sm:w-full w-full" >
           <h4 className="footer.body.number text-center">
             11 9 5923 5367
           </h4>
         </div>
-        <div className="lg:w-4/12 md:w-4/12 sm:w-full w-full" >
+        <div className="xl:w-4/12 lg:w-4/12 md:w-4/12 sm:w-full w-full" >
           <ul className="footer.body.social flex ml-auto mr-auto justify-center item-center">
             <li className="w-4/12 text-center" >
-              <a href="#" className="footer.body.social.icon">
+              <a href="https://github.com/Mizael606" target="_blank" className="footer.body.social.icon">
                 <i className="icon-github"></i>
               </a>
             </li>
             <li className="w-4/12 text-center" >
-              <a href="#" className="footer.body.social.icon">
+              <a href="https://www.linkedin.com/in/mizzzael606/" target="_blank" className="footer.body.social.icon">
                 <i className="icon-linkedin"></i>
               </a>
             </li>
             <li className="w-4/12 text-center" >
-              <a href="#" className="footer.body.social.icon">
+              <a href="https://www.instagram.com/mizzzael_/" target="_blank" className="footer.body.social.icon">
                 <i className="icon-instagram"></i>
               </a>
             </li>
           </ul>
         </div>
-        <div className="lg:w-5/12 md:w-5/12 sm:w-full w-full text-center" >
+        <div className="xl:w-4/12 lg:w-5/12 md:w-5/12 sm:w-full w-full text-center" >
           <a href="mailto: mizael.lemos.job@outlook.com" className="footer.body.link" >
             <span className="footer.body.link.label" >
               mizael.lemos.job@outlook.com
@@ -87,12 +87,33 @@ const FooterHooks = (props) => {
         display: block;
         color: var(--color-white);
         font-weight: 200;
+        transition: ease 220ms all;
+      }
+
+      .footer\.header\.contactme:hover {
+        color: var(--color-blue-light);
+        background-color: var(--color-white);
       }
 
       .footer\.body\.number,
       .footer\.body\.link\.label {
         color: var(--color-blue);
-        font-weight: 900
+        font-weight: 900;
+        transition: ease 220ms all;
+        cursor: pointer;
+      }
+
+      .footer\.body\.number:hover,
+      .footer\.body\.link\.label:hover {
+        color: var(--color-violet);
+      }
+
+      .footer\.body\.social\.icon i:before{
+        transition: ease 250ms all;
+      }
+
+      .footer\.body\.social\.icon:hover i:before{
+        color: var(--color-grey);
       }
 
       @media only screen and (max-width: 640px) {
@@ -103,7 +124,7 @@ const FooterHooks = (props) => {
         }
 
         .footer\.header {
-          padding: 20vh 0;
+          padding: 10vh 0 20vh;
         }
 
         .footer:before {
@@ -186,8 +207,6 @@ const FooterHooks = (props) => {
       }
 
       @media only screen and (min-width: 768px) {
-
-        
 
         .footer:before,
         .footer\.header {

@@ -1,6 +1,6 @@
 {
   "name": "meu-site",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,11 +11,12 @@
     "@svgr/webpack": "^5.3.0",
     "circular-std": "^1.0.3",
     "imagesloaded": "^4.1.4",
+    "lottie-web": "^5.6.7",
     "next": "9.3.1",
     "poppins-font": "^1.0.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-scroll-parallax": "^2.3.2"
+    "rellax": "^1.12.1"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.0",

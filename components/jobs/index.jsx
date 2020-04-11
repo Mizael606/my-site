@@ -1,7 +1,7 @@
 const JobsHooks = props => {
   return (<>
     <section className="jobs w-full">
-      <header className="jobs.header w-full">
+      <header id="page-jobs" className="jobs.header w-full">
         <div className="jobs.header.content lg:w-10/12 md:w-11/12 sm:w-10/12 w-11/12 mr-auto ml-auto">
           <div className="jobs.header.line md:w-full sm:w-11/12 w-full mr-auto ml-auto">
             <h2 className="jobs.header.title md:w-full sm:w-11/12 mr-auto ml-auto">
@@ -85,7 +85,7 @@ const JobsHooks = props => {
       }
 
       .jobs\.header\.list\.item\.image {
-        max-width: 360px;
+        max-width: 80vw;
       }
 
       .jobs\.header\.list\.item:last-child .jobs\.header\.list\.item\.figure:before {

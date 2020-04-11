@@ -31,7 +31,7 @@
   --font-size-title-nn: 44px;
   --font-size-subtitle-nn: 16px;
   --font-size-default-nn: 16px;
-  --font-size-menu-nn: 10px;
+  --font-size-menu-nn: 12px;
 
   /* Medium 768px*/
   --font-size-title-sm: 28px;
@@ -60,7 +60,36 @@
 @tailwind utilities;
 /* tailwind */
 
+body {
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: none; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-grey); 
+  border-radius: 5px;
+  transition: ease 220ms all;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-blue-light); 
+}
+
 body,
 body * {
   font-family: var(--font-family);
+  text-rendering: optimizeLegibility;
 }

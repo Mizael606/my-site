@@ -1,5 +1,5 @@
 const AboutHooks = props => {
-  return (<><section className="w-full about">
+  return (<><section id="page-about" className="w-full about">
     <div className="about.content xl:w-10/12 md:w-11/12 sm:w-11/12 w-full flex flex-wrap content-center items-center justify-center mr-auto ml-auto">
       <aside className="about.header lg:w-4/12 md:w-full sm:w-11/12 w-11/12" >
         <header className="xl:w-full lg:w-full md:w-full sm:w-10/12 w-full mr-auto ml-auto py-4">
@@ -33,6 +33,7 @@ const AboutHooks = props => {
       background-color: var(--color-pink);
       border-radius: 0 0 320px 0;
       padding: 15vh 0;
+      position: relative;
     }  
 
     .about\.header\.title {
@@ -46,12 +47,24 @@ const AboutHooks = props => {
       color: var(--color-red);
       font-weight: 200;
       font-family: var(--font-variant);
+      transition: ease 220ms all;
+    }
+
+    .about\.header\.curriculum:hover {
+      background-color: var(--color-blue-light);
+      color: var(--color-violet);
     }
 
     .about\.header\.curriculum\.icon {
       background-color: var(--color-red);
+      transition: ease 220ms all;
       color: var(--color-white);
       border-radius: 100%;
+    }
+
+    .about\.header\.curriculum:hover .about\.header\.curriculum\.icon {
+      background-color: var(--color-violet);
+      color: var(--color-blue-light);
     }
 
     .about\.header\.text {

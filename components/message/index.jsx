@@ -3,7 +3,7 @@ import Carousel from "../carousel/index";
 const MessagesHook = props => {
 
   return (<>
-    <section className="message">
+    <section id="page-messages" className="message">
       <header className="message.header lg:w-10/12 mr-auto ml-auto">
         <figure className="message.header.quotation">
           <img src="assets/images/quotes.svg" alt="" className="message.header.quotation.image" />
@@ -233,7 +233,8 @@ const MessagesHook = props => {
       @media only screen and (max-width: 640px) {
 
         .message\.box {
-          height: 250px;
+          min-height: 250px;
+          padding: 10px 0
         }
 
         .message\.box\.header\.title {

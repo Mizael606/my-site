@@ -2,7 +2,7 @@
 const SkillsHooks = props => {
 
   return (<>
-    <section className="skill flex flex-wrap">
+    <section id="page-skills" className="skill flex flex-wrap">
       <header className="skill.header xl:w-10/12 lg:w-10/12 md:w-11/12 sm:w-11/12 mr-auto ml-auto">
         <h2 className="skill.header.title">
           What can I do?

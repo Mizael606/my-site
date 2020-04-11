@@ -5,16 +5,22 @@ import Skills from "../components/skills"
 import Jobs from "../components/jobs"
 import Message from "../components/message"
 import Footer from "../components/footer"
+import Loading from "../components/loading"
+import ParallaxHeader from "../components/header/parallax"
 
 const Home = () => (
   <>
-    <Head />
-    <Header />
-    <About />
-    <Skills />
-    <Jobs />
-    <Message />
-    <Footer />
+    <Loading />
+    <main id="main" >
+      <Head />
+      <ParallaxHeader />
+      <Header />      
+      <About />
+      <Skills />
+      <Jobs />
+      <Message />
+      <Footer />
+    </main>
   </>
 )
 
