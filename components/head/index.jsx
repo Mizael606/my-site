@@ -5,6 +5,7 @@ const HeadComponent = () => (
     <title>
       WD - Mizael Silva Lemos - Desenvolvedor Web
     </title>
+    <link rel="manifest" href="/manifest.json" />
     <Metatags />
   </Head>
 );

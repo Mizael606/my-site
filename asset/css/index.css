@@ -53,8 +53,6 @@
   --font-size-menu-lg: 16px;
 }
 
-@import url('icons.css');
-
 /* tailwind */
 @tailwind base;
 @tailwind components;
