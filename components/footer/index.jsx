@@ -1,7 +1,10 @@
 const FooterHooks = (props) => {
 
   return (<>
-    <section className="footer lg:w-full">
+    <section id="page-footer" className="footer lg:w-full">
+      <i data-rellax-desktop-speed="-2" data-rellax-tablet-speed="-2" data-rellax-mobile-speed="-2" data-rellax-speed="0" className="rellax.parallax rellax.figure rellax.figure.three">
+        <img src="assets/images/dots.svg" alt=""/>
+      </i>
       <header className="footer.header lg:w-10/12 md:w-11/12 mr-auto ml-auto">
         <h4 className="footer.header.title text-center">
           Work together with me ?
@@ -10,7 +13,7 @@ const FooterHooks = (props) => {
           Simply call or drop a message
         </p>
 
-        <button className="footer.header.contactme mr-auto ml-auto">
+        <button onClick={() => window.location = 'https://api.whatsapp.com/send?phone=5511959235367'} className="footer.header.contactme mr-auto ml-auto">
           HIRE ME
         </button>
       </header>
@@ -132,6 +135,7 @@ const FooterHooks = (props) => {
         }
 
         .footer\.header\.title {
+          margin-top: 20px;
           font-size: var(--font-size-title-st)
         }
 
@@ -261,6 +265,7 @@ const FooterHooks = (props) => {
         }
 
         .footer\.header\.title {
+          margin-top: 10vh;
           font-size: var(--font-size-title-md)
         }
 

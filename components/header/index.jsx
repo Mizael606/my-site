@@ -80,39 +80,57 @@ function scrollIt(destination, duration = 320, easing = 'easeInOutQuint', callba
 }
 
 const header = (props) => {
-  let [activateMenu, setActivateMenu] = useState(false);
   let activateAbout = false;
+  let activateCareer = false;
   let activateWork = false;
   let activatePortfolio = false;
+  let activateMenu = false;
   let toggleMenu = () => {
     let position = window.pageYOffset;
     let target = window.document.getElementById('page-about');
+    let positioncareer = document.getElementById('page-career');
     let positionskills = document.getElementById('page-skills');
     let positionjobs = document.getElementById('page-jobs');
     let positionMessage = document.getElementById('page-messages');
     let topPos = target.offsetTop;
-    
+    let menu = window.document.getElementById('header-fixed-left');
     if ( position >= topPos && !activateMenu ) {
-      setActivateMenu(true);
+      menu.className = menu.className.replace("is-show", "").trim();
+      menu.className += " is-show";
+      activateMenu = true;
     } else if (position < topPos && activateMenu) {
-      setActivateMenu(false);
+      menu.className = menu.className.replace("is-show", "").trim();
+      activateMenu = false;
     }
 
-    if (position >=topPos && position < positionskills.offsetTop  && !activateAbout ) {
+    if (position >=topPos && position < positioncareer.offsetTop  && !activateAbout ) {
       window.document.querySelector('[data-refer="page-about"]').className = window.document.querySelector('[data-refer="page-about"]').className.replace("is-active", "").trim();
-      window.document.querySelector('[data-refer="page-skills"]').className = window.document.querySelector('[data-refer="page-skills"]').className.replace("is-active", "").trim();
+      window.document.querySelector('[data-refer="page-career"]').className = window.document.querySelector('[data-refer="page-career"]').className.replace("is-active", "").trim();
       window.document.querySelector('[data-refer="page-about"]').className += " is-active";
       activateAbout = true;
       activateWork =  false;
-    } 
+      activateCareer = false;
+    }
+
+    console.log(position >= positioncareer.offsetTop && position < positioncareer.offsetTop  && !activateCareer);
+    
+    if (position >= positioncareer.offsetTop && position < positionskills.offsetTop  && !activateCareer ) {
+      window.document.querySelector('[data-refer="page-career"]').className = window.document.querySelector('[data-refer="page-career"]').className.replace("is-active", "").trim();
+      window.document.querySelector('[data-refer="page-about"]').className = window.document.querySelector('[data-refer="page-about"]').className.replace("is-active", "").trim();
+      window.document.querySelector('[data-refer="page-skills"]').className = window.document.querySelector('[data-refer="page-skills"]').className.replace("is-active", "").trim();
+      window.document.querySelector('[data-refer="page-career"]').className += " is-active";
+      activateCareer = true;
+      activateAbout = false;
+      activateWork =  false;
+    }
     
     if (position >= positionskills.offsetTop && position < positionjobs.offsetTop  && !activateWork) {
-      window.document.querySelector('[data-refer="page-about"]').className = window.document.querySelector('[data-refer="page-about"]').className.replace("is-active", "").trim();
+      window.document.querySelector('[data-refer="page-career"]').className = window.document.querySelector('[data-refer="page-career"]').className.replace("is-active", "").trim();
       window.document.querySelector('[data-refer="page-skills"]').className = window.document.querySelector('[data-refer="page-skills"]').className.replace("is-active", "").trim();
       window.document.querySelector('[data-refer="page-jobs"]').className = window.document.querySelector('[data-refer="page-jobs"]').className.replace("is-active", "").trim();
       window.document.querySelector('[data-refer="page-skills"]').className += " is-active";
-      activateAbout = false;
       activatePortfolio = false;
+      activateCareer = false;
       activateWork =  true;
     } 
     
@@ -137,13 +155,17 @@ const header = (props) => {
     if (window) {
       window.addEventListener('scroll', () => {
         toggleMenu();
-      }, false);
+      }, false);      
     }
   });
   
   return (
     <>    
     <header className="header w-full" >
+      <i data-rellax-speed="-8" data-rellax-tablet-speed="-7" className="rellax.parallax rellax.circle rellax.circle.one"></i>
+      <i data-rellax-speed="-4" data-rellax-tablet-speed="-3" className="rellax.parallax rellax.circle rellax.circle.two"></i>
+      <i data-rellax-speed="5" className="rellax.parallax rellax.circle rellax.circle.three"></i>
+      <i data-rellax-speed="5" className="rellax.parallax rellax.circle rellax.circle.three"></i>
       <button className="header.mobile.menu md:hidden">
         <span><i></i></span>
       </button>
@@ -185,7 +207,7 @@ const header = (props) => {
         <section className="lg:w-6/12 md:w-6/12 lg:block md:block hidden header.men">
           <header className="header.men.header w-full ">
             <ul className="header.men.menu flex content-center items-center justify-center xl:py-4 py-1 text-center">
-              <li className="header.men.menu.item mr-6">
+              <li className="header.men.menu.item lg:mr-6 md:mr-2">
                 <a href="#" onClick={ e => {
                   e.preventDefault();
                   scrollIt(document.getElementById('page-about'));
@@ -195,7 +217,17 @@ const header = (props) => {
                   </span>
                 </a>
               </li>
-              <li className="header.men.menu.item mr-6">
+              <li className="header.men.menu.item lg:mr-6 md:mr-2">
+                <a href="#" onClick={ e => {
+                  e.preventDefault();
+                  scrollIt(document.getElementById('page-career'));
+                }}>
+                  <span>
+                    CAREER
+                  </span>
+                </a>
+              </li>
+              <li className="header.men.menu.item lg:mr-6 md:mr-2">
                 <a href="#" onClick={ e => {
                   e.preventDefault();
                   scrollIt(document.getElementById('page-skills'));
@@ -205,7 +237,7 @@ const header = (props) => {
                   </span>
                 </a>
               </li>
-              <li className="header.men.menu.item mr-6">
+              <li className="header.men.menu.item lg:mr-6 md:mr-2">
                 <a href="#" onClick={ e => {
                   e.preventDefault();
                   scrollIt(document.getElementById('page-jobs'));
@@ -218,7 +250,7 @@ const header = (props) => {
               <li className="header.men.menu.item mr-6">
                 <a href="#" onClick={ e => {
                   e.preventDefault();
-
+                  window.top.location.pathname = "/assets/docs/curriculo.pdf";
                 }}>
                   <span className="header.men.menu.button">
                     HIRE ME
@@ -235,9 +267,9 @@ const header = (props) => {
         </section>
       </section>
     </header>
-    <section className={`Header.fixed.left ${(activateMenu && "is-show")}`}>
+    <section id="header-fixed-left" className="Header.fixed.left">
       <ul className="Header.fixed.items">
-        <li data-refer="page-about" className="Header.fixed.item" >
+        <li data-refer="page-about" className="Header.fixed.item text-center" >
           <a href="#" onClick={e => {
             e.preventDefault();
             scrollIt(document.getElementById('page-about'));
@@ -245,7 +277,15 @@ const header = (props) => {
             About
           </a>
         </li>
-        <li data-refer="page-skills" className="Header.fixed.item" >
+        <li data-refer="page-career" className="Header.fixed.item text-center" >
+          <a href="#" onClick={e => {
+            e.preventDefault();
+            scrollIt(document.getElementById('page-career'));
+          }} >
+            Career
+          </a>
+        </li>
+        <li data-refer="page-skills" className="Header.fixed.item text-center" >
           <a href="#" onClick={e => {
             e.preventDefault();
             scrollIt(document.getElementById('page-skills'));
@@ -253,7 +293,7 @@ const header = (props) => {
             Work
           </a>
         </li>
-        <li data-refer="page-jobs" className="Header.fixed.item" onClick={() => {
+        <li data-refer="page-jobs" className="Header.fixed.item text-center" onClick={() => {
           scrollIt(document.getElementById('page-jobs'));
         }} >
           <a href="#" >
@@ -266,7 +306,7 @@ const header = (props) => {
       .header,
       .header div {
         position: relative;
-      }
+      }      
 
       .header {
         padding: 10vh 10px;
@@ -284,7 +324,7 @@ const header = (props) => {
         top: 0;
         right: 0;
         background-color: var(--color-red);
-        z-index: -1;
+        z-index: 0;
       }
 
       .header:after {
@@ -539,7 +579,7 @@ const header = (props) => {
         }
 
         .header:after {
-          max-width: 50vw;
+          max-width: 90vw;
         }
 
         .header\.title\.name,
@@ -652,7 +692,7 @@ const header = (props) => {
 
         .header\.men\.menu\.item a span {
           font-size: var(--font-size-menu-lg)
-        }      
+        }            
 
       }
     `}</style>

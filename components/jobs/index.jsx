@@ -120,6 +120,11 @@ const JobsHooks = props => {
       }
 
       @media only screen and (max-width: 640px) {
+
+        .jobs {
+          padding-top: 0;
+        }
+
         .jobs\.header,
         .jobs\.header:before {
           height: 200px;

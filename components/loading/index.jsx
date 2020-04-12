@@ -54,7 +54,7 @@ class LoadingPage extends Component {
         if (img.isLoaded) loadedNumberImage++;
         let imgs = window.document.querySelectorAll('img').length;
         let onePercent = imgs / 100;
-        let currentPercent = loadedNumberImage / onePercent;
+        let currentPercent = Math.round(loadedNumberImage / onePercent);
         this.setState({
           percentload: currentPercent
         });
