@@ -1,0 +1,444 @@
+:root{
+  --font-family: 'CircularStd', Helvetica, 'Helvetica Neue', sans-serif;
+
+  --color-blue: #482E9B;
+  --color-blue-light: #A3A6E2;
+  --color-red: #F62939;  
+  --color-white: #ffffff;
+  --color-grey: #A7A5B5;
+  --color-pink: #FFF8F6;
+  --color-violet: #FFE9EB;
+  --color-orange: #FEC369;
+  /* Regular */
+  --font-size-default: 20px;
+  --font-size-title: 48px;
+  --font-size-menu: 16px;
+  /* smart <640px*/
+
+  --font-variant: 'Poppins', Arial, Helvetica, 'Helvetica Neue', sans-serif;
+
+  /* @media */
+  /* --> nano: 640px; */
+  /* --> medium: 768px*; */
+  /* --> regular: 1024px; */
+  /* --> large: 1800px; */
+
+  --font-size-title-st: 24px;
+  --font-size-subtitle-st: 20px;
+  --font-size-default-st: 12px;
+  --font-size-menu-st: 8px;
+
+  /* Nano 640px*/
+  --font-size-title-nn: 44px;
+  --font-size-subtitle-nn: 16px;
+  --font-size-default-nn: 16px;
+  --font-size-menu-nn: 12px;
+
+  /* Medium 768px*/
+  --font-size-title-sm: 28px;
+  --font-size-subtitle-sm: 24px;
+  --font-size-default-sm: 12px;
+  --font-size-menu-sm: 10px;
+  
+  /* Medium 1024px*/
+  --font-size-title-md: 38px;
+  --font-size-subtitle-md: 28px;
+  --font-size-default-md: 14px;
+  --font-size-menu-md: 12px;
+
+  /* Large 1800*/
+  --font-size-title-lg: 58px;
+  --font-size-subtitle-lg: 42px;
+  --font-size-default-lg: 20px;
+  --font-size-menu-lg: 16px;
+}
+
+@import url('icons.css');
+
+/* tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* tailwind */
+
+body {
+  overflow: hidden;
+  overflow-x: hidden !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: none; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-grey); 
+  border-radius: 5px;
+  transition: ease 220ms all;
+  cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-blue-light); 
+}
+
+body,
+body * {
+  font-family: var(--font-family);
+  text-rendering: optimizeLegibility;
+}
+
+#main {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.rellax\.parallax,
+.rellax\.figure {
+  position: absolute;
+}
+
+.rellax\.circle {
+  border-radius: 100%;
+}
+
+.rellax\.figure img {
+  width: 100%;
+}
+
+.rellax\.circle\.one,
+.rellax\.circle\.seven {
+  background-color: var(--color-violet);
+}
+
+.rellax\.circle\.two {
+  background-color: var(--color-grey);
+  opacity: 0.1;
+}
+
+.rellax\.circle\.eight {
+  background-color: var(--color-red);
+}
+
+.rellax\.circle\.three {
+  opacity: 0.05;
+  background-color: var(--color-white);
+}
+
+.rellax\.circle\.four {
+  background-color: var(--color-blue-light);
+}
+
+.rellax\.circle\.five,
+.rellax\.circle\.six,
+.rellax\.circle\.nine {
+  background-color: var(--color-orange);
+}
+
+.rellax\.figure\.three {
+  height: auto;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 640px) {
+
+  .rellax\.circle\.four {
+    width: 70px;
+    height: 70px;
+    top: 40px;
+    right: 70px;
+  }
+
+  .rellax\.circle\.five {
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    right: 10px;
+  }
+
+  .rellax\.figure\.one {
+    width: 290px;
+    height: 130px;
+    top: -65px;
+    right: 0;
+  }
+
+  .rellax\.circle\.six {
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 15px;
+    z-index: -1;
+  }
+
+  .rellax\.circle\.seven {
+    width: 30vh;
+    height: 30vh;
+    top: 40px;
+    left: 5vw;
+    z-index: -1;
+  }
+
+  .rellax\.figure\.two {
+    width: 290px;
+    height: 290px;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .rellax\.circle\.eight {
+    width: 80px;
+    height: 80px;
+    left: 15px;
+    top: 10px
+  }
+
+  .rellax\.circle\.nine {
+    width: 80px;
+    height: 80px;
+    left: 120px;
+    top: 5px;
+  }
+
+  .rellax\.figure\.three {
+    right: 0;
+    top: 260px;
+    width: 90vw;    
+  }
+
+}
+
+@media only screen and (min-width: 640px) {
+
+  .rellax\.circle\.four {
+    width: 70px;
+    height: 70px;
+    top: 40px;
+    right: 70px;
+  }
+
+  .rellax\.circle\.five {
+    width: 30px;
+    height: 30px;
+    top: 5;
+    right: 10px;
+  }
+
+  .rellax\.figure\.one {
+    width: 290px;
+    height: 130px;
+    top: -65px;
+    right: 0;
+  }
+
+  .rellax\.circle\.six {
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 15px;
+    z-index: -1;
+  }
+
+  .rellax\.circle\.seven {
+    width: 30vh;
+    height: 30vh;
+    top: 40px;
+    left: 5vw;
+    z-index: -1;
+  }
+
+  .rellax\.figure\.two {
+    width: 490px;
+    height: 490px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .rellax\.circle\.eight {
+    width: 80px;
+    height: 80px;
+    left: 15px;
+    top: 10px
+  }
+
+  .rellax\.circle\.nine {
+    width: 80px;
+    height: 80px;
+    left: 120px;
+    top: 5px;
+  }
+
+  .rellax\.figure\.three {
+    right: 0;
+    top: -70vh;
+    width: 90vw;    
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+  .rellax\.circle\.one {
+    width: 160px;
+    height: 160px;
+    top: -30px;
+    left: -30px;
+  }
+
+  .rellax\.circle\.two {
+    width: 60vh;
+    height: 60vh;
+    left: 0;
+    right: 0;
+    top: 20vh;
+    z-index: -1;
+    margin: 0 auto;
+  }
+
+  .rellax\.circle\.three {
+    width: 70vh;
+    height: 70vh;
+    z-index: 0;
+    top: -20vh;
+    right: -20vh;
+  }
+
+  .rellax\.circle\.four {
+    width: 80px;
+    height: 80px;
+    top: 30px;
+    right: 90px;
+  }
+
+  .rellax\.circle\.five {
+    width: 40px;
+    height: 40px;
+    top: 0;
+    right: 10px;
+  }
+
+  .rellax\.figure\.one {
+    width: 390px;
+    height: 180px;
+    top: -90px;
+    right: 0;
+  }
+
+  .rellax\.circle\.six {
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 10px;
+  }
+
+  .rellax\.circle\.seven {
+    width: 40vh;
+    height: 40vh;
+    top: 80px;
+    left: 10vw;
+  }
+
+  .rellax\.figure\.two {
+    width: 400px;
+    height: 400px;
+    top: 40px;
+  }
+
+  .rellax\.circle\.eight {
+    width: 90px;
+    height: 90px;
+    left: 10px;
+    top: 0
+  }
+
+  .rellax\.circle\.nine {
+    width: 110px;
+    height: 110px;
+    left: 120px;
+    top: 10px;
+  }
+
+  .rellax\.figure\.three {
+    top: -110vh;
+    width: 80vw;    
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+  
+  .rellax\.circle\.one {
+    width: 360px;
+    height: 360px;
+    top: -60px;
+    left: -60px;
+  }
+
+  .rellax\.circle\.three {
+    width: 70vh;
+    height: 70vh;
+    top: -20vh;
+    right: -20vh;
+  }
+
+  .rellax\.circle\.four {
+    width: 80px;
+    height: 80px;
+    top: 20px;
+    right: 80px;
+    z-index: 0;
+  }
+
+  .rellax\.circle\.five {
+    width: 40px;
+    height: 40px;
+    top: 0;
+    right: 10px;
+    z-index: -1;
+  }
+
+  .rellax\.figure\.one {
+    width: 390px;
+    height: 180px;
+    top: -90px;
+    right: 0;
+  }
+
+  .rellax\.figure\.two {
+    width: 490px;
+    height: 490px;
+    top: 30px;
+  }
+
+  .rellax\.circle\.eight {
+    width: 120px;
+    height: 120px;
+    left: 20vw;
+    top: 0
+  }
+
+  .rellax\.circle\.nine {
+    width: 110px;
+    height: 110px;
+    left: 10vw;
+    top: 10px;
+  }
+
+  .rellax\.figure\.three {
+    top: -60vh;
+    width: 70vw;    
+  }
+
+}
