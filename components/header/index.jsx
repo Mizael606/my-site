@@ -174,10 +174,6 @@ const header = (props) => {
   return (
     <>    
     <header className="header w-full" >
-      <i data-rellax-speed="-8" data-rellax-tablet-speed="-7" className="rellax.parallax rellax.circle rellax.circle.one"></i>
-      <i data-rellax-speed="-4" data-rellax-tablet-speed="-3" className="rellax.parallax rellax.circle rellax.circle.two"></i>
-      <i data-rellax-speed="5" className="rellax.parallax rellax.circle rellax.circle.three"></i>
-      <i data-rellax-speed="5" className="rellax.parallax rellax.circle rellax.circle.three"></i>
       <button onClick={() => {toggleMenuMobile()}} id="mobile-menu" className="header.mobile.menu md:hidden">
         <span><i></i></span>
       </button>
@@ -315,7 +311,7 @@ const header = (props) => {
                   </span>
                 </a>
               </li>
-              <li className="header.men.menu.item mr-6">
+              <li className="header.men.menu.item">
                 <a href="#" onClick={ e => {
                   e.preventDefault();
                   window.top.location.pathname = "/assets/docs/curriculo.pdf";
@@ -583,7 +579,6 @@ const header = (props) => {
 
       .header\.men\.menu\.item a span.header\.men\.menu\.button {
         display: block;
-        padding: 10px 25px;
         background-color: var(--color-white);
         color: var(--color-red);
         border-bottom-right-radius: 20px;
@@ -727,6 +722,11 @@ const header = (props) => {
           line-height: 64px;
           font-size: 28px;
         }
+
+        .header\.men\.menu\.item a span.header\.men\.menu\.button {
+          padding: 10px 5px;
+        }
+      
       }
 
       @media only screen and (min-width: 768px) {
@@ -776,6 +776,10 @@ const header = (props) => {
 
         .header\.title\.hello {
           font-size: 33px;
+        }
+
+        .header\.men\.menu\.item a span.header\.men\.menu\.button {
+          padding: 10px 25px;
         }
 
       }

@@ -1,11 +1,6 @@
 const AboutHooks = props => {
   return (<>
   <section id="page-about" className="w-full about">
-    <i data-rellax-desktop-speed="-5" data-rellax-tablet-speed="-4" data-rellax-mobile-speed="-3" data-rellax-speed="-3" className="rellax.parallax rellax.circle rellax.circle.four"></i>
-    <i data-rellax-desktop-speed="-4" data-rellax-tablet-speed="-2" data-rellax-mobile-speed="-1" data-rellax-speed="-1" className="rellax.parallax rellax.circle rellax.circle.five"></i>
-    <i data-rellax-desktop-speed="-8" data-rellax-tablet-speed="-3" data-rellax-mobile-speed="-2" data-rellax-speed="-2" className="rellax.parallax rellax.figure rellax.figure.one">
-      <img src="assets/images/dots.svg" alt=""/>
-    </i>
     <div className="about.content xl:w-10/12 md:w-11/12 sm:w-11/12 w-full flex flex-wrap content-center items-center justify-center mr-auto ml-auto">
       <aside className="about.header lg:w-4/12 md:w-full sm:w-11/12 w-11/12" >
         <header className="xl:w-full lg:w-full md:w-full sm:w-10/12 w-full mr-auto ml-auto py-4">
@@ -87,7 +82,7 @@ const AboutHooks = props => {
 
     @media only screen and (max-width: 640px) {
       .about {
-        padding: 25vh 0;
+        padding: 30px 0;
         border-radius: 0 0 160px 0;
       }
 

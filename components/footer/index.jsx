@@ -2,9 +2,6 @@ const FooterHooks = (props) => {
 
   return (<>
     <section id="page-footer" className="footer lg:w-full">
-      <i data-rellax-desktop-speed="-2" data-rellax-tablet-speed="-2" data-rellax-mobile-speed="-2" data-rellax-speed="0" className="rellax.parallax rellax.figure rellax.figure.three">
-        <img src="assets/images/dots.svg" alt=""/>
-      </i>
       <header className="footer.header lg:w-10/12 md:w-11/12 mr-auto ml-auto">
         <h4 className="footer.header.title text-center">
           Trabalhe junto comigo!
@@ -53,7 +50,8 @@ const FooterHooks = (props) => {
     </section>
     <style jsx>{`
       .footer {
-        margin: 15vh 0;
+        margin: 0;
+        padding-bottom: 30px;
         position: relative;        
       }
 
@@ -121,6 +119,10 @@ const FooterHooks = (props) => {
 
       @media only screen and (max-width: 640px) {
 
+        .footer {
+          margin: 30px 0;
+         }
+
         .footer:before,
         .footer\.header {
           height: 300px;
@@ -149,7 +151,7 @@ const FooterHooks = (props) => {
         }
 
         .footer\.body {
-          padding: 15vh 0 0;
+          padding: 30px 0;
         }
 
         .footer\.body\.number,

@@ -33,6 +33,23 @@ class CarouselHook extends Component {
     setInterval(() => {
       this.animationStar();
     }, this.delay);
+
+    setTimeout(() => {
+      carouselRects = window.document.getElementById(this.id).getClientRects()[0];
+    
+      this.widthCarousel = carouselRects.width;
+      this.formatCarousel(true);
+    }, 5000);
+
+    window.addEventListener('resize', () => {
+      let compare = window.document.getElementById(this.id).getClientRects()[0];
+      if (compare.width != carouselRects.width) {
+        carouselRects = window.document.getElementById(this.id).getClientRects()[0];
+      
+        this.widthCarousel = carouselRects.width;
+        this.formatCarousel(true);
+      }
+    });
     
     window.addEventListener('resize', () => {
       carouselRects = window.document.getElementById(this.id).getClientRects()[0];

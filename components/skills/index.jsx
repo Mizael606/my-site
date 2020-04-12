@@ -3,9 +3,6 @@ const SkillsHooks = props => {
 
   return (<>
     <section id="page-skills" className="skill flex flex-wrap">
-      <i data-rellax-desktop-speed="-2" data-rellax-tablet-speed="-2" data-rellax-mobile-speed="-2" data-rellax-speed="-2" className="rellax.parallax rellax.figure rellax.figure.two">
-        <img src="assets/images/polygon.svg" alt=""/>
-      </i>
       <header className="skill.header xl:w-10/12 lg:w-10/12 md:w-11/12 sm:w-11/12 mr-auto ml-auto">
         <h2 className="skill.header.title">
           O que eu posso fazer?
@@ -102,6 +99,11 @@ const SkillsHooks = props => {
       }
 
       @media only screen and (max-width: 640px) {
+
+        .skill {
+          padding: 30px 0;
+        }
+
         .skill\.header\.title {
           font-size: var(--font-size-title-st)
         }

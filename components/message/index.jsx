@@ -4,8 +4,6 @@ const MessagesHook = props => {
 
   return (<>
     <section id="page-messages" className="message">
-    <i data-rellax-desktop-speed="-2" data-rellax-tablet-speed="-1" data-rellax-mobile-speed="-1" data-rellax-speed="-0" className="rellax.parallax rellax.circle rellax.circle.eight"></i>
-    <i data-rellax-desktop-speed="-1" data-rellax-tablet-speed="-1" data-rellax-mobile-speed="0" data-rellax-speed="-1" className="rellax.parallax rellax.circle rellax.circle.nine"></i>
       <header className="message.header lg:w-10/12 mr-auto ml-auto">
         <figure className="message.header.quotation">
           <img src="assets/images/quotes.svg" alt="" className="message.header.quotation.image" />
@@ -132,7 +130,7 @@ const MessagesHook = props => {
     </section>    
     <style jsx>{`
       .message {
-        padding: 15vh 0;
+        padding: 0 0 15vh;
         position: relative;
       }
 
@@ -168,6 +166,9 @@ const MessagesHook = props => {
       }
 
       @media only screen and (max-width: 640px) {
+        .message {
+          padding: 30px 0
+        }
 
         .message\.box {
           min-height: 250px;

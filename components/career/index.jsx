@@ -5,8 +5,6 @@ class Career extends Component {
   render() {
     return (<>
       <section id="page-career" className="Career w-full">
-        <i data-rellax-desktop-speed="-2" data-rellax-tablet-speed="-2" data-rellax-mobile-speed="-1" data-rellax-speed="-1" className="rellax.parallax rellax.circle rellax.circle.six"></i>
-        <i data-rellax-desktop-speed="-3" data-rellax-tablet-speed="-3" data-rellax-mobile-speed="-2" data-rellax-speed="-2" className="rellax.parallax rellax.circle rellax.circle.seven"></i>
         <section className="xl:w-10/12 sm:w-11/12 w-full mx-auto">
           <header className="xl:w-full lg:w-full md:w-full sm:w-11/12 w-11/12 Career.header mr-auto ml-auto py-4">
             <h4 className="Career.header.title text-center">
@@ -259,10 +257,16 @@ class Career extends Component {
 
         @media only screen and (max-width: 640px) {
           .Career {
+            padding-top: 30px;
             padding-bottom: 0;
           }
+          
+          .Career\.header {
+            padding-bottom: 30px;
+          }
+          
           .Career\.header\.title {
-            font-size: var(--font-size-title-st)
+            font-size: var(--font-size-title-st);
           }
 
           .Career\.job\.name {
