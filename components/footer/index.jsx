@@ -129,7 +129,7 @@ const FooterHooks = (props) => {
         }
 
         .footer\.header {
-          padding: 10vh 0 20vh;
+          padding: 50px 0 20vh;
         }
 
         .footer:before {
