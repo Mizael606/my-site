@@ -20,8 +20,8 @@ const meta = () => (
     <meta name="copyright" content={`© ${new Date().getFullYear()} - ${metatags.author}`} />
     <meta property="og:title" content={ metatags.author } />
     <meta property="og:description" content={ metatags.description } />
-    <meta property="og:image" content={ `http://${ metatags.host }${metatags.image}` } />
-    <meta property="og:url" content={`http://${ metatags.host }/`} />
+    <meta property="og:image" content={ `https://${ metatags.host }${metatags.image}` } />
+    <meta property="og:url" content={`https://${ metatags.host }/`} />
     <meta name="twitter:title" content={ metatags.author } />
     <meta name="twitter:description" content={ metatags.description } />
     <meta name="twitter:image" content={ metatags.image } />

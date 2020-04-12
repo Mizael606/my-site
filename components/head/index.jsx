@@ -7,6 +7,8 @@ const HeadComponent = () => (
     </title>
     <link rel="manifest" href="/manifest.json" />
     <Metatags />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163427193-1"></script>
+    <script src="/assets/js/ga.js"></script>
   </Head>
 );
 
