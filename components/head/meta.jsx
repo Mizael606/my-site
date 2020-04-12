@@ -6,7 +6,7 @@ let metatags = {
   `),
   keywords: ['Desenvolvedor', 'Front-End'],
   image: "/assets/images/social-banner.png",
-  host: ( !process.env.BROWSER ) ? "" : window.location.hostname
+  host: "https://www.mzdev.me"
 };
 
 const meta = () => (

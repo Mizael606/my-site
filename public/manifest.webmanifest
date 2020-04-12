@@ -1,7 +1,7 @@
 {
   "name": "Mizael - The Web Dev",
   "short_name": "Mizael - The Web Dev",
-  "start_url": "https://www.mzdev.me/",
+  "start_url": "www.mzdev.me",
   "display": "standalone",
   "background_color": "#482E9B",
   "description": "Site pessoal de Mizael S. Lemos.",
