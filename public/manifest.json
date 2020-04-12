@@ -1,32 +1,32 @@
 {
   "name": "Mizael - The Web Dev",
   "short_name": "Mizael - The Web Dev",
-  "start_url": ".",
+  "start_url": "https://mzdev.me/",
   "display": "standalone",
   "background_color": "#482E9B",
   "description": "Site pessoal de Mizael S. Lemos.",
   "icons": [{
-    "src": "assets/images/logo-48.png",
+    "src": "https://meu-site-portfolio.herokuapp.com/assets/images/logo-48.png",
     "sizes": "48x48",
     "type": "image/png"
   }, {
-    "src": "assets/images/logo-72.png",
+    "src": "https://meu-site-portfolio.herokuapp.com/assets/images/logo-72.png",
     "sizes": "72x72",
     "type": "image/png"
   }, {
-    "src": "assets/images/logo-96.png",
+    "src": "https://meu-site-portfolio.herokuapp.com/assets/images/logo-96.png",
     "sizes": "96x96",
     "type": "image/png"
   }, {
-    "src": "assets/images/logo-144.png",
+    "src": "https://meu-site-portfolio.herokuapp.com/assets/images/logo-144.png",
     "sizes": "144x144",
     "type": "image/png"
   }, {
-    "src": "assets/images/logo-168.png",
+    "src": "https://meu-site-portfolio.herokuapp.com/assets/images/logo-168.png",
     "sizes": "168x168",
     "type": "image/png"
   }, {
-    "src": "assets/images/logo-192.png",
+    "src": "https://meu-site-portfolio.herokuapp.com/assets/images/logo-192.png",
     "sizes": "192x192",
     "type": "image/png"
   }],

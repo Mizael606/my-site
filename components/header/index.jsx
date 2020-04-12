@@ -111,8 +111,6 @@ const header = (props) => {
       activateWork =  false;
       activateCareer = false;
     }
-
-    console.log(position >= positioncareer.offsetTop && position < positioncareer.offsetTop  && !activateCareer);
     
     if (position >= positioncareer.offsetTop && position < positionskills.offsetTop  && !activateCareer ) {
       window.document.querySelector('[data-refer="page-career"]').className = window.document.querySelector('[data-refer="page-career"]').className.replace("is-active", "").trim();

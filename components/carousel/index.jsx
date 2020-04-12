@@ -23,28 +23,29 @@ class CarouselHook extends Component {
     
   }
 
+  initCarousel() {
+    let carouselRects = window.document.getElementById(this.id).getClientRects()[0];      
+    this.carousel  = window.document.getElementById(this.id);
+    this.area = this.carousel.children[0];
+    this.rail = this.area.children[0];
+    this.widthCarousel = carouselRects.width;
+    this.formatCarousel();
+    setInterval(() => {
+      this.animationStar();
+    }, this.delay);
+    
+    window.addEventListener('resize', () => {
+      carouselRects = window.document.getElementById(this.id).getClientRects()[0];
+      
+      this.widthCarousel = carouselRects.width;
+      this.formatCarousel(true);
+    
+    }, false);
+  }
+
   componentDidMount() {
     if (typeof window === 'undefined') return;
-    
-      let carouselRects = window.document.getElementById(this.id).getClientRects()[0];
-      
-      this.carousel  = window.document.getElementById(this.id);
-      this.area = this.carousel.children[0];
-      this.rail = this.area.children[0];
-      this.widthCarousel = carouselRects.width;
-      this.formatCarousel();
-      setInterval(() => {
-        this.animationStar();
-      }, this.delay);
-      
-      window.addEventListener('resize', () => {
-        carouselRects = window.document.getElementById(this.id).getClientRects()[0];
-        
-        this.widthCarousel = carouselRects.width;
-        this.formatCarousel(true);
-      
-      }, false);
-
+    this.initCarousel();
   }
 
   animationStar() {
