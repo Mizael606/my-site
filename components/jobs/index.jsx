@@ -5,7 +5,7 @@ const JobsHooks = props => {
         <div className="jobs.header.content lg:w-10/12 md:w-11/12 sm:w-10/12 w-11/12 mr-auto ml-auto">
           <div className="jobs.header.line md:w-full sm:w-11/12 w-full mr-auto ml-auto">
             <h2 className="jobs.header.title md:w-full sm:w-11/12 mr-auto ml-auto">
-              My Latest Work
+              Últimos Trabalhos
             </h2>
           </div>
         </div>

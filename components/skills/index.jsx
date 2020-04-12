@@ -8,7 +8,7 @@ const SkillsHooks = props => {
       </i>
       <header className="skill.header xl:w-10/12 lg:w-10/12 md:w-11/12 sm:w-11/12 mr-auto ml-auto">
         <h2 className="skill.header.title">
-          What can I do?
+          O que eu posso fazer?
         </h2>
       </header>
       <section className="skill.body flex flex-wrap justify-center items-center xl:w-10/12 lg:w-10/12 md:w-11/12 sm:w-11/12  mr-auto ml-auto ">

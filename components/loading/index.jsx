@@ -16,8 +16,12 @@ class LoadingPage extends Component {
   
   componentDidMount() {
     if ( !window ) return;
-    this.loadCheck();
-    this.initAnimation();
+    setTimeout(() => {
+      setTimeout(() => {
+        this.loadCheck();
+      }, 800);
+      this.initAnimation();
+    }, 800);
   }
 
   initAnimation() {

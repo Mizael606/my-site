@@ -7,14 +7,14 @@ const FooterHooks = (props) => {
       </i>
       <header className="footer.header lg:w-10/12 md:w-11/12 mr-auto ml-auto">
         <h4 className="footer.header.title text-center">
-          Work together with me ?
+          Trabalhe junto comigo!
         </h4>
         <p className="footer.header.subtitle text-center">
-          Simply call or drop a message
+          Basta ligar ou mandar uma mensagem
         </p>
 
         <button onClick={() => window.location = 'https://api.whatsapp.com/send?phone=5511959235367'} className="footer.header.contactme mr-auto ml-auto">
-          HIRE ME
+          FALE COMIGO
         </button>
       </header>
       <section className="footer.body lg:w-10/12 md:w-11/12  sm:w-11/12 mr-auto ml-auto flex flex-wrap justify-center item-center">

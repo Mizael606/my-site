@@ -10,7 +10,7 @@ class Career extends Component {
         <section className="xl:w-10/12 sm:w-11/12 w-full mx-auto">
           <header className="xl:w-full lg:w-full md:w-full sm:w-11/12 w-11/12 Career.header mr-auto ml-auto py-4">
             <h4 className="Career.header.title text-center">
-              Career
+              Carreira
             </h4>
           </header>
         </section>

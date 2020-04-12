@@ -10,8 +10,8 @@ const AboutHooks = props => {
       <aside className="about.header lg:w-4/12 md:w-full sm:w-11/12 w-11/12" >
         <header className="xl:w-full lg:w-full md:w-full sm:w-10/12 w-full mr-auto ml-auto py-4">
           <h4 className="about.header.title">
-            My<br />
-            Biography
+            Minha<br />
+            História
           </h4>
           <button onClick={() => {
             window.top.location.pathname = "/assets/docs/curriculo.pdf"
@@ -23,11 +23,9 @@ const AboutHooks = props => {
       <section className="about.body lg:w-8/12 md:w-full sm:w-11/12 w-11/12">
         <div className="lg:w-10/12 md:w-full sm:w-10/12 mr-auto ml-auto w-full">
           <p className="about.header.text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error, voluptates nesciunt. Incidunt ipsum, temporibus, repellat dolor tempora porro minus dolorem reiciendis nesciunt similique quia suscipit quos, laborum rerum ut at!
-            Harum minus magnam quasi ipsam inventore voluptatem aliquam aperiam incidunt, voluptatum reprehenderit nostrum doloribus quos error impedit officiis nesciunt quas praesentium id? Voluptates placeat optio necessitatibus provident. Repellendus, iste ut.
-            Itaque ut quibusdam reprehenderit sunt iste nam ea enim quam! Fuga consectetur nobis, cumque maxime, rerum suscipit odit ut voluptatibus dignissimos rem accusamus. Repellendus, pariatur quae nihil quam nisi enim.
+            Meu nome é Mizael, tenho {(new Date().getFullYear() - 1995) - 1} anos, e mais de 6 anos de experiência no mercado, tenho proficiência tanto em desenvolvimento Back-End, quanto Front-End, e amplo conhecimento em novas tecnologias, como React ou Angular, Front-End, e Laravel no Back-End, não busco nada além de uma oportunidade de fazer a diferença, venho de uma bibliografia de aprendizado que foca no desenvolvimento responsável, e eficiente tendo como ênfase, não só desenvolver mais também a concepção de ideias dentro dos projetos, como todo e qualquer analista de dados, visto que a premissa de qualquer desenvolvedor é ver o projeto dar certo, como qualquer artífice para com sua obra.
             <br /><br />
-            Culpa nam hic qui asperiores et illo. Veniam quidem qui nemo? Dolorem recusandae laudantium nostrum, explicabo dolores iste nulla vero, illum, aut nesciunt delectus voluptatum! Quis, dicta ipsam. Reprehenderit, dignissimos.
+            Caso tenha interesse, me venha falar comigo, estou sempre analisando propostas, afinal de contas em um mundo conectado via web, uma boa conversa não custa mais que um click.
           </p>
           <button className="about.header.curriculum flex content-center items-center justify-center lg:hidden md:flex">
             <span className="about.header.curriculum.icon" ><i className="icon-cheveron-down"></i></span> Download

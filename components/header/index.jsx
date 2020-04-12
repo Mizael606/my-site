@@ -150,6 +150,20 @@ const header = (props) => {
     }
 
   };
+  let menuMobileActive = false;
+  let toggleMenuMobile = () => {
+    let trigger = window.document.getElementById('mobile-menu');
+    let target = window.document.querySelector('[data-menu="mobile-menu"]');
+    if (!menuMobileActive) {
+      menuMobileActive = true;
+      trigger.className += " is-hide";
+      target.className += " is-show";
+    } else {
+      trigger.className = trigger.className.replace("is-hide", "").trim();
+      target.className = target.className.replace("is-show", "").trim();
+      menuMobileActive = false;
+    }
+  };
   useEffect(() => {
     toggleMenu();
     if (window) {
@@ -166,9 +180,65 @@ const header = (props) => {
       <i data-rellax-speed="-4" data-rellax-tablet-speed="-3" className="rellax.parallax rellax.circle rellax.circle.two"></i>
       <i data-rellax-speed="5" className="rellax.parallax rellax.circle rellax.circle.three"></i>
       <i data-rellax-speed="5" className="rellax.parallax rellax.circle rellax.circle.three"></i>
-      <button className="header.mobile.menu md:hidden">
+      <button onClick={() => {toggleMenuMobile()}} id="mobile-menu" className="header.mobile.menu md:hidden">
         <span><i></i></span>
       </button>
+      <section data-menu="mobile-menu" className="header.mobile.menu.float md:hidden">
+        <ul className="header.mobile.menu.items">
+          <li>
+            <a href="#" onClick={ e => {
+              e.preventDefault();
+              toggleMenuMobile();
+              setTimeout(() => {
+                scrollIt(document.getElementById('page-about'));
+              }, 800);
+            }}>
+              <span>
+                SOBRE
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={ e => {
+              e.preventDefault();
+              toggleMenuMobile();
+              setTimeout(() => {
+                scrollIt(document.getElementById('page-career'));
+              }, 800);
+            }}>
+              <span>
+                CARREIRA
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={ e => {
+              e.preventDefault();
+              toggleMenuMobile();
+              setTimeout(() => {
+                scrollIt(document.getElementById('page-skills'));
+              }, 800);
+            }}>
+              <span>
+                HABILIDADES
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={ e => {
+              e.preventDefault();
+              toggleMenuMobile();
+              setTimeout(() => {
+                scrollIt(document.getElementById('page-jobs'));
+              }, 800);
+            }}>
+              <span>
+                TRABALHOS
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
       <section className="xl:w-10/12 lg:w-11/12 md:w-11/12 sm:w-full w-11/12 flex ml-auto mr-auto">
         <section className="lg:w-6/12 md:w-6/12 sm:w-11/12 w-full ml-auto mr-auto">
           <div className="lg:w-full md:w-full sm:w-10/12 ml-auto mr-auto">
@@ -176,7 +246,7 @@ const header = (props) => {
               <img className="header.brand.img" src="/assets/images/logo.svg" alt=""/>
             </figure>
             <h4 className="header.title.hello">
-              HI, I am
+              Prazer, sou
             </h4>
 
             <h2 className="header.title.name">
@@ -213,7 +283,7 @@ const header = (props) => {
                   scrollIt(document.getElementById('page-about'));
                 }}>
                   <span>
-                    ABOUT
+                    SOBRE
                   </span>
                 </a>
               </li>
@@ -223,7 +293,7 @@ const header = (props) => {
                   scrollIt(document.getElementById('page-career'));
                 }}>
                   <span>
-                    CAREER
+                    CARREIRA
                   </span>
                 </a>
               </li>
@@ -233,7 +303,7 @@ const header = (props) => {
                   scrollIt(document.getElementById('page-skills'));
                 }}>
                   <span>
-                    WORK
+                    HABILIDADES
                   </span>
                 </a>
               </li>
@@ -243,7 +313,7 @@ const header = (props) => {
                   scrollIt(document.getElementById('page-jobs'));
                 }}>
                   <span>
-                    PORTFOLIO
+                    TRABALHOS
                   </span>
                 </a>
               </li>
@@ -253,7 +323,7 @@ const header = (props) => {
                   window.top.location.pathname = "/assets/docs/curriculo.pdf";
                 }}>
                   <span className="header.men.menu.button">
-                    HIRE ME
+                    CONTRATE-ME
                   </span>
                 </a>
               </li>
@@ -274,7 +344,7 @@ const header = (props) => {
             e.preventDefault();
             scrollIt(document.getElementById('page-about'));
           }} >
-            About
+            Sobre
           </a>
         </li>
         <li data-refer="page-career" className="Header.fixed.item text-center" >
@@ -282,7 +352,7 @@ const header = (props) => {
             e.preventDefault();
             scrollIt(document.getElementById('page-career'));
           }} >
-            Career
+            Carreira
           </a>
         </li>
         <li data-refer="page-skills" className="Header.fixed.item text-center" >
@@ -290,14 +360,15 @@ const header = (props) => {
             e.preventDefault();
             scrollIt(document.getElementById('page-skills'));
           }} >
-            Work
+            Hábilidades
           </a>
         </li>
-        <li data-refer="page-jobs" className="Header.fixed.item text-center" onClick={() => {
-          scrollIt(document.getElementById('page-jobs'));
-        }} >
-          <a href="#" >
-            Portfolio
+        <li data-refer="page-jobs" className="Header.fixed.item text-center" >
+          <a href="#" onClick={(e) => {
+            e.preventDefault();
+            scrollIt(document.getElementById('page-jobs'));
+          }} >
+            Trabalhos
           </a>
         </li>
       </ul>          
@@ -351,8 +422,40 @@ const header = (props) => {
         right: 4vw;
         width: 30px;
         height: 30px;
+        outline: none;
         border-radius: 100%;
-        z-index: 99;
+        z-index: 9999;
+      }
+
+      .header\.mobile\.menu\.float {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        right: 0;
+        background-color: var(--color-violet);
+        z-index: 999;
+        transition: ease 220ms all;
+      }
+
+      .header\.mobile\.menu\.float:not(.is-show) {
+        right: -100vw;
+      }
+
+      .header\.mobile\.menu\.items {
+        width: 100%;
+        margin-top: 100px;
+        text-align: right;
+      }
+
+      .header\.mobile\.menu\.items li {
+        padding: 10px 5px;
+      }
+
+      .header\.mobile\.menu\.items li a span {
+        font-weight: bold;
+        color: var(--color-red);
+        font-size: var(--font-size-subtitle-st)
       }
 
       .header\.mobile\.menu span {
@@ -531,7 +634,7 @@ const header = (props) => {
       .Header\.fixed\.item {
         height: 120px;
         line-height: 60px;
-        font-size: 25px
+        font-size: 18px
       }
 
       .Header\.fixed\.item a {

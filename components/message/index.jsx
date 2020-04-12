@@ -17,15 +17,15 @@ const MessagesHook = props => {
             <section className="message.box">
               <header className="message.box.header lg:w-10/12 mr-auto ml-auto">
                 <h5 className="message.box.header.title text-center">
-                  " Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere harum quos veritatis? Eum animi mollitia eveniet vel ab modi accusamus obcaecati in? "
+                  " Os que se encantam com a prática sem a ciência são como os timoneiros que entram no navio sem timão nem bússola, nunca tendo certeza do seu destino. "
                 </h5>
               </header>
               <section className="message.box.body">
                 <h5 className="message.box.body.author text-center">
-                  Bruce Mccoy
+                  Leonardo da Vinci
                 </h5>
                 <p className="message.box.body.title text-center">
-                  Founder & CEO Aleis
+                  Polímata
                 </p>
               </section>
             </section>
@@ -33,15 +33,15 @@ const MessagesHook = props => {
             <section className="message.box">
               <header className="message.box.header">
                 <h5 className="message.box.header.title text-center">
-                  " Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere harum quos veritatis? Eum animi mollitia eveniet vel ab modi accusamus obcaecati in? "
+                  " Pouco conhecimento faz com que as pessoas se sintam orgulhosas. Muito conhecimento, que se sintam humildes. É assim que as espigas sem grãos erguem desdenhosamente a cabeça para o céu, enquanto que as cheias as baixam para a terra, sua mãe. "
                 </h5>
               </header>
               <section className="message.box.body">
                 <h5 className="message.box.body.author text-center">
-                  Bruce Mccoy
+                  Leonardo da Vinci
                 </h5>
                 <p className="message.box.body.title text-center">
-                  Founder & CEO Aleis
+                  Polímata
                 </p>
               </section>
             </section>
@@ -49,15 +49,15 @@ const MessagesHook = props => {
             <section className="message.box">
               <header className="message.box.header">
                 <h5 className="message.box.header.title text-center">
-                  " Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere harum quos veritatis? Eum animi mollitia eveniet vel ab modi accusamus obcaecati in? "
+                  " Não é possível ser bom pela metade. "
                 </h5>
               </header>
               <section className="message.box.body">
                 <h5 className="message.box.body.author text-center">
-                  Bruce Mccoy
+                  Leon Tolstói
                 </h5>
                 <p className="message.box.body.title text-center">
-                  Founder & CEO Aleis
+                  Escritor
                 </p>
               </section>
             </section>
@@ -65,18 +65,67 @@ const MessagesHook = props => {
             <section className="message.box">
               <header className="message.box.header">
                 <h5 className="message.box.header.title text-center">
-                  " Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere harum quos veritatis? Eum animi mollitia eveniet vel ab modi accusamus obcaecati in? "
+                  " A condição essencial para a felicidade é ser humano e dedicado ao trabalho. "
+                </h5>
+              </header>
+              <section className="message.box.body">
+              <h5 className="message.box.body.author text-center">
+                  Leon Tolstói
+                </h5>
+                <p className="message.box.body.title text-center">
+                  Escritor
+                </p>
+              </section>
+            </section>
+
+            <section className="message.box">
+              <header className="message.box.header">
+                <h5 className="message.box.header.title text-center">
+                  " Inteligência é a habilidade de evitar fazer o trabalho, e mesmo assim conseguir ter o trabalho realizado. "
                 </h5>
               </header>
               <section className="message.box.body">
                 <h5 className="message.box.body.author text-center">
-                  Bruce Mccoy
+                  Linus Torvalds
                 </h5>
                 <p className="message.box.body.title text-center">
-                  Founder & CEO Aleis
+                  Engenheiro de Software
                 </p>
               </section>
             </section>
+
+            <section className="message.box">
+              <header className="message.box.header">
+                <h5 className="message.box.header.title text-center">
+                  " Não creio que haja uma emoção, mais intensa para um inventor do que ver suas criações funcionando. Essa emoção faz você esquecer de comer, de dormir, de tudo. "
+                </h5>
+              </header>
+              <section className="message.box.body">
+              <h5 className="message.box.body.author text-center">
+                  Nikola Tesla
+                </h5>
+                <p className="message.box.body.title text-center">
+                  Inventor
+                </p>
+              </section>
+            </section>
+
+            <section className="message.box">
+              <header className="message.box.header">
+                <h5 className="message.box.header.title text-center">
+                  " Creio firmemente em uma lei de compensação. As verdadeiras recompensas são sempre proporcionais ao esforço e aos sacrifícios feitos. "
+                </h5>
+              </header>
+              <section className="message.box.body">
+              <h5 className="message.box.body.author text-center">
+                  Nikola Tesla
+                </h5>
+                <p className="message.box.body.title text-center">
+                  Inventor
+                </p>
+              </section>
+            </section>
+
           </Carousel>
         </section>
       </section>
